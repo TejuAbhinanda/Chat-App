@@ -98,9 +98,9 @@ export const useAuthStore = create((set, get) => ({
 
     try {
       const res = await axiosInstance.put(
-        "/auth/update-profile",
-        data
-      );
+      "/auth/update-profile-picture",
+      data
+    );
 
       set({ authUser: res.data });
 
