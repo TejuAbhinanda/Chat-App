@@ -1,18 +1,11 @@
 {
-  "dependencies": {
-    "backend": "^0.0.0",
-    "daisyui": "^5.5.20",
-    "react-hot-toast": "^2.6.0",
-    "react-router-dom": "^7.15.1"
-  },
   "name": "chat-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install --perfix backend && npm run build --prefix frontend && npm run build --prefix frontend",
-    "start": "npm run start --prefix backend"
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm start --prefix backend"
   },
   "repository": {
     "type": "git",
