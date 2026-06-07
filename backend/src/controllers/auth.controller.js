@@ -127,9 +127,9 @@ export const updateProfilePicture = async (req, res) => {
       });
     }
 
-    const uploadResponse = await cloudinary.uploader.upload(
-      profilePicture
-    );
+    console.log("Uploading to cloudinary...");
+    const uploadResponse = await cloudinary.uploader.upload(profilePicture);
+    console.log("Cloudinary success:", uploadResponse.secure_url);
 
     const updatedUser = await User.findByIdAndUpdate(
       userId,
@@ -171,3 +171,4 @@ export const checkAuth = (req, res) => {
     });
   }
 };
+
