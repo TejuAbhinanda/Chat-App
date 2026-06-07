@@ -141,7 +141,13 @@ export const updateProfilePicture = async (req, res) => {
       }
     );
 
-    res.status(200).json(updatedUser);
+    res.status(200).json({
+      _id: updatedUser._id,
+      fullName: updatedUser.fullName,
+      email: updatedUser.email,
+      profilePicture: updatedUser.profilePicture,
+      createdAt: updatedUser.createdAt,
+    });
   } catch (error) {
     console.log(
       "Error in update profile picture:",
